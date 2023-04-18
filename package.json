@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "npx eslint ./src"
+    "lint": "npx eslint ./src",
+    "compose": "docker-compose build && docker-compose up"
   },
   "eslintConfig": {
     "extends": [

@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  toolbox-client:
+    container_name: toolbox-client
+    restart: always
+    build: .
+    ports:
+      - 3000:3000
