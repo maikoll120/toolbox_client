@@ -9,6 +9,14 @@ const header = (header) => {
 }
 
 const rows = (data) => {
+  if (!data.length) {
+    return (
+      <tr>
+        <td colSpan={4}>No data found</td>
+      </tr>
+    )
+  }
+
   return data.map((item, index) => (
     <tr key={index}>
       <td>{item[0]}</td>

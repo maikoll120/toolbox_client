@@ -8,12 +8,13 @@ import './FileTable.style.css'
 
 const FileTable = () => {
   const fileList = useSelector((state) => state.fileList.value)
+  const fileSelect = useSelector((state) => state.fileSelect.value)
   const dispatch = useDispatch()
 
   useEffect(() => {
     async function fetchData () {
       try {
-        const response = await axios.get(`${URL_API}/files/data`)
+        const response = await axios.get(`${URL_API}/files/data?fileName=${fileSelect}`)
         dispatch(setFileList(response.data))
       } catch (error) {
         dispatch(setFileList([]))
@@ -21,7 +22,7 @@ const FileTable = () => {
     }
 
     fetchData()
-  }, [])
+  }, [fileSelect])
 
   return (
     <div className='table-wapper'>

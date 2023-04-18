@@ -1,10 +1,11 @@
 import React from 'react'
-import { Header, FileTable } from '../../components/'
+import { Header, FileToolbar, FileTable } from '../../components/'
 
 const Home = () => {
   return (
     <div>
       <Header />
+      <FileToolbar />
       <FileTable />
     </div>
   )
