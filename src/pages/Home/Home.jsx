@@ -1,11 +1,11 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button'
+import { Header, FileTable } from '../../components/'
 
 const Home = () => {
   return (
     <div>
-      <div>Home</div>
-      <Button variant='primary'>Find</Button>
+      <Header />
+      <FileTable />
     </div>
   )
 }
